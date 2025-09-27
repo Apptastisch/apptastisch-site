@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fabian Dieckhoff – Apptastisch</title>
+<meta name="description" content="App-Entwicklung, Prototyping und Beratung. Einfach, klar, apptastisch.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <nav class="nav container" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag">Freelance Softwareentwicklung</span>
+    <h1>Fabian Dieckhoff – Apptastisch</h1>
+    <p class="lead">Ich entwickle schlanke Apps und Prototypen für Web & Mobile – mit einem Fokus auf klare UI, schnelle Auslieferung und sauberen Code.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:DEINE-EMAIL@BEISPIEL.DE?subject=Anfrage%20Apptastisch">Projekt anfragen</a>
+      <a class="btn" href="#leistungen">Leistungen ansehen</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="leistungen" class="grid" aria-labelledby="leistungen-heading">
+      <h2 id="leistungen-heading" style="grid-column:1/-1;margin:0;">Leistungen</h2>
+      <article class="card">
+        <h3>App-Entwicklung</h3>
+        <p>Konzeption & Umsetzung moderner Web- und Mobilanwendungen (React, TypeScript, Flutter u. a.).</p>
+      </article>
+      <article class="card">
+        <h3>Prototyping & MVP</h3>
+        <p>Schnelle Interaktionen, klickbare Demos und belastbare MVPs, die Nutzerwert früh sichtbar machen.</p>
+      </article>
+      <article class="card">
+        <h3>Beratung</h3>
+        <p>Architektur, Code-Reviews und pragmatische Roadmaps – damit Ihr Team zügig vorankommt.</p>
+      </article>
+    </section>
+
+    <section id="kontakt" style="margin-top:32px">
+      <h2>Kontakt</h2>
+      <p>Am einfachsten per E‑Mail: <a href="mailto:DEINE-EMAIL@BEISPIEL.DE">DEINE-EMAIL@BEISPIEL.DE</a></p>
+      <p class="muted">Bitte ersetze E‑Mail und Adresse im <a href="impressum.html">Impressum</a>, bevor die Seite live geht.</p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p><small>© <span id="year"></span> Fabian Dieckhoff – Apptastisch</small></p>
+  </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
