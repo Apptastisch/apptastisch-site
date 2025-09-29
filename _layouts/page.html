@@ -2,6 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: 'de' }}">
 {% assign full_title = page.title | append: ' – ' | append: site.title %}
 {% include head.html %}
+{% seo title=false %}
 <body>
   <nav class="nav container" aria-label="Hauptnavigation">
     {% include nav.html %}
