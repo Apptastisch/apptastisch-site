@@ -1,0 +1,29 @@
+title: "Fabian Dieckhoff – Apptastisch"
+email: kontakt@apptastisch.app
+description: "Entwicklung und Vertrieb von Software und mobilen Applikationen."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://apptastisch.app" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+# Build settings
+theme: null
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: /:categories/:title/
+
+nav:
+  - title: Start
+    url: /
+  - title: Leistungen
+    url: /#leistungen
+  - title: Impressum
+    url: /pages/impressum/
+  - title: Datenschutz
+    url: /pages/datenschutz/
+
+# SEO / Social (optional anpassen)
+seo:
+  name: "Apptastisch"

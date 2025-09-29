@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'de' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  {% include head.html %}
+  {% seo %}
+</head>
+<body>
+  <nav class="nav container" aria-label="Hauptnavigation">
+    {% include nav.html %}
+  </nav>
+  <main class="container">
+    {{ content }}
+  </main>
+  <footer class="container">
+    <p><small>© <span id="year"></span> {{ site.title }}</small></p>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

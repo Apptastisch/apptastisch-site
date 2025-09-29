@@ -1,0 +1,7 @@
+{% for item in site.nav %}
+  {% assign href = item.url %}
+  {% unless href contains '://' %}
+    {% assign href = site.baseurl | append: href %}
+  {% endunless %}
+  <a href="{{ href }}">{{ item.title }}</a>
+{% endfor %}
