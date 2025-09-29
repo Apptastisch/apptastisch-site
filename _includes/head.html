@@ -3,3 +3,20 @@
 <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fabian Dieckhoff – Apptastisch",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "email": "mailto:kontakt@apptastisch.app",
+  "description": "Entwicklung und Vertrieb von Software und mobilen Applikationen.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gniddenborg 18",
+    "postalCode": "28870",
+    "addressLocality": "Ottersberg",
+    "addressCountry": "DE"
+  }
+}
+</script>
