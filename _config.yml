@@ -19,6 +19,14 @@ plugins:
   - jekyll-robots-txt             # /robots.txt automatisch erzeugen
   - jekyll-redirect-from          # saubere Redirects bei URL-Änderungen
 
+robots:
+  sitemap: "https://apptastisch.app/sitemap.xml"
+  policies:
+    - user_agent: "*"
+      allow: "/"
+      disallow:
+        - "/pages/impressum/"
+        - "/pages/datenschutz/"
 # --- SEO / Social ------------------------------------------------------------
 # jekyll-seo-tag liest diese Felder automatisch
 logo: "/assets/images/logo.png"   # ⚙️ TODO: quadratisches Logo (≥ 512×512)
