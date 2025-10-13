@@ -5,6 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://apptastisch.app" # the base hostname & protocol for your site, e.g. http://example.com
 lang: de_DE
 
+timezone: Europe/Paris
 # Build settings
 theme: null
 markdown: kramdown
