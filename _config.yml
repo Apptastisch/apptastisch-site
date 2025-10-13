@@ -1,20 +1,44 @@
-title: "Fabian Dieckhoff – Apptastisch"
-email: kontakt@apptastisch.app
+# --- Site basics -------------------------------------------------------------
+title: "Apptastisch – Fabian Dieckhoff"
 description: "Entwicklung und Vertrieb von Software und mobilen Applikationen."
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://apptastisch.app" # the base hostname & protocol for your site, e.g. http://example.com
-lang: de_DE
+url: "https://apptastisch.app"
+baseurl: ""                       # Root-Domain
+lang: de-DE                       # für <html lang="…">
+timezone: Europe/Berlin
 
-timezone: Europe/Paris
-# Build settings
+# --- Build -------------------------------------------------------------------
 theme: null
 markdown: kramdown
+permalink: "/:title/"             # kurze, sprechende URLs
+
+# --- Plugins -----------------------------------------------------------------
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+  - jekyll-seo-tag                # Open Graph, Twitter Cards, JSON-LD
+  - jekyll-sitemap                # /sitemap.xml
+  - jekyll-feed                   # /feed.xml (Blog/RSS, falls Posts existieren)
+  - jekyll-robots-txt             # /robots.txt automatisch erzeugen
+  - jekyll-redirect-from          # saubere Redirects bei URL-Änderungen
 
-permalink: /:categories/:title/
+# --- SEO / Social ------------------------------------------------------------
+# jekyll-seo-tag liest diese Felder automatisch
+logo: "/assets/images/logo.png"   # ⚙️ TODO: quadratisches Logo (≥ 512×512)
+image: "/assets/images/og-default.jpg"  # ⚙️ TODO: Default OG-Image (1200×630)
 
+author:
+  name: "Fabian Dieckhoff"
+  url: "https://apptastisch.app"
+
+social:
+  name: "Apptastisch"
+  links:
+    - "https://github.com/Apptastisch"
+    - "https://www.linkedin.com/in/fabian-dieckhofg"
+    #https://www.linkedin.com/in/fabian-dieckhoff?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+    # weitere Profile möglich, z. B. Mastodon, X, YouTube, App Store etc.
+
+
+
+# --- Navigation (für dein Theme/Templates) -----------------------------------
 nav:
   - title: Start
     url: /
@@ -25,6 +49,58 @@ nav:
   - title: Datenschutz
     url: /pages/datenschutz/
 
-# SEO / Social (optional anpassen)
-seo:
-  name: "Apptastisch"
+# --- Collections / Posts -----------------------------------------------------
+# Falls du einen Blog willst:
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# --- Defaults: saubere Meta- und Indexing-Policies ---------------------------
+defaults:
+  # Standard für alle Seiten/Beiträge
+  - scope:
+      path: ""
+    values:
+      lang: "de-DE"
+      image: "/assets/images/og-default.jpg"
+      sitemap:
+        changefreq: monthly
+        priority: 0.7
+
+  # Blog-Posts (falls vorhanden)
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      sitemap:
+        changefreq: weekly
+        priority: 0.8
+
+  # Recht & Systemseiten: nicht indexieren
+  - scope:
+      path: "pages/impressum"
+    values:
+      robots: "noindex,follow"
+      sitemap:
+        priority: 0.1
+  - scope:
+      path: "pages/datenschutz"
+    values:
+      robots: "noindex,follow"
+      sitemap:
+        priority: 0.1
+
+# --- Excludes (nicht veröffentlichen) ----------------------------------------
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - .gitignore
+  - .DS_Store
