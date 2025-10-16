@@ -15,8 +15,7 @@ permalink: "/:title/"             # kurze, sprechende URLs
 plugins:
   - jekyll-seo-tag                # Open Graph, Twitter Cards, JSON-LD
   - jekyll-sitemap                # /sitemap.xml
-  - jekyll-feed                   # /feed.xml (Blog/RSS, falls Posts existieren)
-  - jekyll-robots-txt             # /robots.txt automatisch erzeugen
+  - jekyll-feed                   # /feed.xml (Blog/RSS, falls Posts existi           # /robots.txt automatisch erzeugen
   - jekyll-redirect-from          # saubere Redirects bei URL-Änderungen
 
 # --- SEO / Social ------------------------------------------------------------
