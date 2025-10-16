@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: {{ site.baseurl }}/pages/impressum/
+Disallow: {{ site.baseurl }}/pages/datenschutz/
+Disallow: {{ site.baseurl }}/impressum.html
+Disallow: {{ site.baseurl }}/datenschutz.html
+Allow: /
+
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
