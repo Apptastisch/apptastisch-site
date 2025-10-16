@@ -1,8 +1,10 @@
 User-agent: *
-Disallow: {{ site.baseurl }}/pages/impressum/
-Disallow: {{ site.baseurl }}/pages/datenschutz/
-Disallow: {{ site.baseurl }}/impressum.html
-Disallow: {{ site.baseurl }}/datenschutz.html
+Disallow: /impressum
+Disallow: /impressum.html
+Disallow: /datenschutz
+Disallow: /datenschutz.html
+Disallow: /pages/impressum/
+Disallow: /pages/datenschutz/
 Allow: /
 
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+Sitemap: https://apptastisch.app/sitemap.xml
